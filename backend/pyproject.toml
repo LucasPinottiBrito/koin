@@ -1,0 +1,25 @@
+[project]
+name = "koin-backend"
+version = "0.1.0"
+description = "Backend base for koin, a Google Drive and Google Sheets centered personal finance agent."
+requires-python = ">=3.12"
+dependencies = [
+  "alembic>=1.13.2",
+  "fastapi[standard]>=0.115.0",
+  "psycopg[binary]>=3.2.1",
+  "pydantic-settings>=2.4.0",
+  "pymongo>=4.8.0",
+  "sqlalchemy>=2.0.32",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.2",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
